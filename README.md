@@ -50,7 +50,11 @@ The software collects a digital fingerprint of the computer:
 - Graphics card model
 - Computer name
 
+- 
+
 - ZIP Password:  hackforums.net
+
+
 
 Screenshots:
 
