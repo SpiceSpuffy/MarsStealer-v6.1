@@ -52,7 +52,7 @@ The software collects a digital fingerprint of the computer:
 
 - 
 
-- ZIP Password:  hackforums.net
+- ZIP Password:       hackforums.net
 
 
 
