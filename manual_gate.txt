@@ -1,0 +1,50 @@
+1. Устанавливаем nginx
+apt-get update
+apt-get install nginx
+
+2. Запускаем nginx
+service nginx start
+
+3. Правим первый конфиг
+/etc/nginx/sites-available/default
+
+Удаляем весь текст из конфига, вставляем:
+
+server {
+    listen 80;
+    server_name your-proxy-domain.com;
+  location / {
+      proxy_set_header Accept-Encoding "";
+      proxy_set_header Host your-PANEL-domain.com;
+      proxy_set_header X-Real-Host $host;
+      proxy_set_header X-Real-IP $remote_addr;
+            proxy_pass http://your-PANEL-domain.com;
+  }
+}
+
+Заменяем адреса, где your-proxy-domain - ип прокладки, your-PANEL-domain - ип мейна, пример:
+
+server {
+    listen 80;
+    server_name 194.87.234.156;
+  location / {
+      proxy_set_header Accept-Encoding "";
+      proxy_set_header Host 195.133.144.71;
+      proxy_set_header X-Real-Host $host;
+      proxy_set_header X-Real-IP $remote_addr;
+            proxy_pass http://195.133.144.71;
+  }
+}
+
+4. Правим конфиг nginx
+/etc/nginx/nginx.conf
+находим server_names_hash_bucket_size, раскоментируем (удаляем #)
+
+5. Перезапускаем nginx:
+service nginx stop
+service nginx start
+
+6. В index.php на мейне изменяем получение ип адреса
+$IP = $_SERVER["REMOTE_ADDR"];
+на
+$IP = $_SERVER["HTTP_X_REAL_IP"];

